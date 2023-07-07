@@ -50,8 +50,8 @@ class display
             <div class="img-container">
                 <img src="/images/product-1.jpeg" alt="product" class="product-img">
                 <button class="bag-btn" data-id="1">
-                <a href="#">VISIT</a>
                     
+                    VISIT
                 </button>
             </div>
             <h3>${shop.name}</h3>

@@ -12,11 +12,7 @@ app.get("/",(request,response)=>
 {
     response.sendFile("/Users/chirag/Desktop/PEC D/public/index.html");
 });
-app.get("/another",(request,response)=>
-{
-    response.send("aagya");
-    // console.log(request.params.param);
-})
+
 
 app.listen(port,()=>
 {

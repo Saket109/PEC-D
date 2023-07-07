@@ -3,19 +3,7 @@ const productsDOM = document.querySelector('.content-inner');
 
 //SECTION 1 ENDS HERE
 
-
-
-
-//SECTION 2 - ALL THE STORAGES THE ARAYS THE VARIABLES TO BE USED GLOBALLY ADDED HERE
-
 let shoparray = [];//ISME SAAARI KI SAARI DETAILS PADI HAIN PRODUCT K
-
-// SECTION2 ENDS HERE
-
-
-
-
-//SECTION 3 - CLASSES CREATE FOR EACH FUNCTIONALITY AND FUNCTIONS ARE DIVIDE INTO EARCH CLASS
 
 class Shops{
 
@@ -50,8 +38,8 @@ class display
             <div class="img-container">
                 <img src="/images/product-1.jpeg" alt="product" class="product-img">
                 <button class="bag-btn" data-id="1">
-                <a href="#">VISIT</a>
                     
+                    VISIT
                 </button>
             </div>
             <h3>${shop.name}</h3>
@@ -60,22 +48,54 @@ class display
     </li>`;
     
        })
-
+    //    console.log("c");
     productsDOM.innerHTML = result;
     }
 };
 
-//THAT SECTION 3 ENDS HERE
 
 
 
 
-   
+//displaying the products
 
-//TSECTION 4 HIS IS THE MAIN DOM COMMANDS WHERE WE WILL EXECUTE FUNCTIONS CREATED ABOVE ACCORDING TO OUT NEED
+function displayProducts(shoparray) 
+{
+    let result = '';
+    shoparray.forEach(product => {
+        result += `      <article class="product">
+        <div class="img-container">
+            <img src="/images/product-1.jpeg" alt="product" class="product-img">
+            <button class="bag-btn" data-id=${product.id}>
+                <i class="fa fa-shopping-cart"></i>
+                add to bag.
+            </button>
+        </div>
+        <h3>${product.name}</h3>`;
+        console.log(product);
+    })
+    productsDOM.innerHTML = result;
+}
 
+
+    // console.log(shoparray);
+
+    // till here
     document.addEventListener("DOMContentLoaded", () => {
-       
+        //when dom loads get the product info stored in an array SHOPSARRAY
+        // (async function () {
+        //     try {
+        //         const shopsarray = await getProducts();
+        //         shopsarray.forEach((e) => {
+        //             shoparray.push(e);
+        //         })
+        //     }
+        //     catch (error) {
+        //         console.log(error);
+        //     }
+        // })();
+        // console.log(shoparray);
+        // displayProducts(shoparray);
         const shops = new Shops();
         const displaying = new display();
 
@@ -86,8 +106,3 @@ class display
             })
         
     })
-
-//THAT ENDS SECTION 4 HERE.
-
-
-//ALL THE BEST 

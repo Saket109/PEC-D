@@ -14,8 +14,7 @@ app.get("/",(request,response)=>
 });
 app.get("/another",(request,response)=>
 {
-    response.send("aagya");
-    // console.log(request.params.param);
+    
 })
 
 app.listen(port,()=>
